@@ -1,8 +1,9 @@
-let display = document.getElementById('display');
+let displayText = document.getElementById('display-text');
+let cursor = document.getElementById('cursor');
 let currentInput = '0';
 
 function updateDisplay() {
-  display.textContent = currentInput;
+  displayText.textContent = currentInput;
 }
 
 function appendToDisplay(value) {
@@ -39,6 +40,14 @@ function calculate() {
     setTimeout(clearDisplay, 1500);
   }
 }
+
+// Show/hide cursor on focus
+document.getElementById('display').addEventListener('focus', () => {
+  cursor.classList.remove('hidden');
+});
+document.getElementById('display').addEventListener('blur', () => {
+  cursor.classList.add('hidden');
+});
 
 // Keyboard support
 document.addEventListener('keydown', function(e) {

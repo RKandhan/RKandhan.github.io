@@ -8,7 +8,10 @@
   </head>
   <body>
     <div class="calculator">
-      <div id="display" class="display">0</div>
+      <div id="display" class="display">
+        <span id="display-text">0</span>
+        <span id="cursor" class="cursor"></span>
+      </div>
       <div class="buttons">
         <button class="btn clear" onclick="clearDisplay()">C</button>
         <button class="btn operator" onclick="deleteLast()">⌫</button>

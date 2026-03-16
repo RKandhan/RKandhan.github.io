@@ -88,3 +88,22 @@ body {
 .btn.zero {
   grid-column: span 2;
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 2.2rem;
+  background-color: white;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 1s step-start infinite;
+}
+
+.cursor.hidden {
+  display: none;
+}
